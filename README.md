@@ -1,7 +1,3 @@
---- public/github-files/README.md (原始)
-
-
-+++ public/github-files/README.md (修改后)
 # GHL Automation & CRM Specialist Portfolio
 
 Professional portfolio showcasing expertise in GoHighLevel, CRM automation, and business process optimization.
