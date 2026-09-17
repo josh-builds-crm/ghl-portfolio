@@ -81,6 +81,36 @@ section.alt-bg{background:rgba(232,223,214,0.5)}
 .timeline-card ul li{display:flex;align-items:flex-start;gap:8px;font-size:0.85rem;margin-bottom:8px;color:var(--coffee-dark)}
 .timeline-card ul li .dot{color:var(--coffee-light)}
 
+/* Accordion styles */
+.accordion-trigger {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 16px 0;
+    border: none;
+    background: transparent;
+    font-family: 'Special Elite', cursive;
+    font-size: 0.9rem;
+    color: var(--coffee-dark);
+    width: 100%;
+    text-align: left;
+}
+.accordion-trigger .chevron {
+    transition: transform 0.3s ease;
+}
+.accordion-trigger[aria-expanded="true"] .chevron {
+    transform: rotate(180deg);
+}
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+}
+.accordion-content.expanded {
+    max-height: 500px; /* Adjust based on content height */
+}
+
 .case-study{background:rgba(255,255,255,0.6);border:1px solid var(--cream-accent);overflow:hidden}
 .case-study-header{padding:32px;border-bottom:1px solid var(--cream-accent);background:var(--cream)}
 .case-study-header .badges{display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap}
@@ -103,6 +133,8 @@ section.alt-bg{background:rgba(232,223,214,0.5)}
 .result-card{padding:16px;background:rgba(255,255,255,0.7);border:1px solid var(--cream-accent)}
 .result-card .metric{font-family:'Special Elite',cursive;font-size:1.5rem;color:var(--coffee-dark);margin-bottom:4px}
 .result-card .desc{font-size:0.75rem;color:var(--coffee-medium)}
+
+.case-study-spaced { margin-bottom: 40px; }
 
 .cert-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px}
 .cert-grid h3{font-family:'Special Elite',cursive;font-size:1.1rem;color:var(--coffee-dark);margin-bottom:16px}
@@ -253,7 +285,7 @@ nav .nav-links.active{display:flex;flex-direction:column;position:absolute;top:1
 <div class="tech-card"><h4>Data &amp; Forms</h4><div class="tags"><span class="tag">Airtable</span><span class="tag">Formwise</span><span class="tag">Google Forms</span><span class="tag">Google Sheets</span></div></div>
 <div class="tech-card"><h4>Design &amp; Docs</h4><div class="tags"><span class="tag">Canva</span><span class="tag">Google Docs</span><span class="tag">Loom</span><span class="tag">Draw.io</span><span class="tag">Lucidchart</span></div></div>
 <div class="tech-card"><h4>Comms &amp; Messaging</h4><div class="tags"><span class="tag">Twilio</span><span class="tag">SendGrid</span><span class="tag">Instantly</span><span class="tag">Klaviyo</span><span class="tag">Typeform</span></div></div>
-<div class="tech-card"><h4>Infrastructure</h4><div class="tags"><span class="tag">Amazon Workspaces</span><span class="tag">Google Calendar</span><span class="tag">DocuSign</span><span class="tag">ChatGPT</span><span class="tag">Shopify</span></div></div>
+<div class="tech-card"><h4>AI &amp; Infrastructure</h4><div class="tags"><span class="tag">Claude</span><span class="tag">Gemini</span><span class="tag">ChatGPT</span><span class="tag">Qwen</span><span class="tag">Amazon Workspaces</span><span class="tag">Google Calendar</span><span class="tag">DocuSign</span><span class="tag">Shopify</span></div></div>
 </div>
 </div>
 </section>
@@ -284,7 +316,7 @@ nav .nav-links.active{display:flex;flex-direction:column;position:absolute;top:1
 </div>
 </div>
 
-<!-- Real Estate & Operations VA -->
+<!-- Real Estate & Operations VA - Accordion -->
 <div class="timeline-item">
 <div class="timeline-card">
 <div class="header">
@@ -292,16 +324,22 @@ nav .nav-links.active{display:flex;flex-direction:column;position:absolute;top:1
 <div><span class="date">2017 – 2019</span><span class="duration">/ 2 Years</span></div>
 </div>
 <div class="subtitle">Part Time — Marketing Support &amp; Property Management</div>
-<ul>
-<li><span class="dot">•</span>Managed end-to-end property management administration including lease preparation, tenant communications, and DocuSign contract workflows.</li>
-<li><span class="dot">•</span>Created and published MLS listings, marketing flyers, and promotional materials for residential and commercial properties.</li>
-<li><span class="dot">•</span>Supported marketing operations including lead follow-up, email campaigns, and CRM data entry — building the foundational skills that led to full-time CRM specialization.</li>
-<li><span class="dot">•</span>Coordinated with agents, tenants, and vendors to ensure smooth transaction flows and timely lease renewals.</li>
-</ul>
+<button class="accordion-trigger" aria-expanded="false" aria-controls="real-estate-content">
+    <span>▼ View Details</span>
+    <span class="chevron">▼</span>
+</button>
+<div id="real-estate-content" class="accordion-content">
+    <ul>
+        <li><span class="dot">•</span>Managed end-to-end property management administration including lease preparation, tenant communications, and DocuSign contract workflows.</li>
+        <li><span class="dot">•</span>Created and published MLS listings, marketing flyers, and promotional materials for residential and commercial properties.</li>
+        <li><span class="dot">•</span>Supported marketing operations including lead follow-up, email campaigns, and CRM data entry — building the foundational skills that led to full-time CRM specialization.</li>
+        <li><span class="dot">•</span>Coordinated with agents, tenants, and vendors to ensure smooth transaction flows and timely lease renewals.</li>
+    </ul>
+</div>
 </div>
 </div>
 
-<!-- Lead Generation -->
+<!-- Lead Generation - Accordion -->
 <div class="timeline-item">
 <div class="timeline-card">
 <div class="header">
@@ -309,11 +347,17 @@ nav .nav-links.active{display:flex;flex-direction:column;position:absolute;top:1
 <div><span class="date">2017 – 2018</span><span class="duration">/ 1 Year</span></div>
 </div>
 <div class="subtitle">Part Time — Outbound Sales</div>
-<ul>
-<li><span class="dot">•</span>Conducted outbound cold calling to US-based leads, qualifying prospects and setting appointments for senior sales representatives.</li>
-<li><span class="dot">•</span>Researched target companies and built lead lists to support pipeline development for B2B campaigns.</li>
-<li><span class="dot">•</span>Managed email outreach sequences and maintained CRM records for follow-up tracking.</li>
-</ul>
+<button class="accordion-trigger" aria-expanded="false" aria-controls="lead-gen-content">
+    <span>▼ View Details</span>
+    <span class="chevron">▼</span>
+</button>
+<div id="lead-gen-content" class="accordion-content">
+    <ul>
+        <li><span class="dot">•</span>Conducted outbound cold calling to US-based leads, qualifying prospects and setting appointments for senior sales representatives.</li>
+        <li><span class="dot">•</span>Researched target companies and built lead lists to support pipeline development for B2B campaigns.</li>
+        <li><span class="dot">•</span>Managed email outreach sequences and maintained CRM records for follow-up tracking.</li>
+    </ul>
+</div>
 </div>
 </div>
 
@@ -324,8 +368,57 @@ nav .nav-links.active{display:flex;flex-direction:column;position:absolute;top:1
 <!-- Case Study -->
 <section id="case-study" class="alt-bg">
 <div class="container">
-<h2 class="section-title">Featured Case Study</h2>
+<h2 class="section-title">Featured Case Studies</h2>
 <div class="section-line"></div>
+
+<!-- Unicity Case Study -->
+<div class="case-study case-study-spaced">
+<div class="case-study-header">
+<div class="badges"><span class="badge-dark">Case Study</span><span class="badge-outline">Health & Wellness</span></div>
+<h3>Feel Great Conversational AI for Direct Sellers</h3>
+<div class="meta">
+<div class="meta-item"><div class="label">Client</div><div class="value">Unicity International</div></div>
+<div class="meta-item"><div class="label">Team Size</div><div class="value">Multiple Sellers</div></div>
+<div class="meta-item"><div class="label">Timeline</div><div class="value">1 Week per Seller</div></div>
+<div class="meta-item"><div class="label">Tools</div><div class="value">GHL, ChatGPT, Google Sheets</div></div>
+</div>
+</div>
+<div class="case-study-section">
+<h4><span class="num">01.</span> Objective</h4>
+<p>Develop a conversational AI system that could handle initial product inquiries and customer questions for direct sellers, allowing them to focus on higher-value relationship building and closing activities.</p>
+</div>
+<div class="case-study-section">
+<h4><span class="num">02.</span> Solution Implemented</h4>
+<ul>
+<li><span class="arrow">→</span>Created a comprehensive 2,000-character GHL bot prompt with detailed product knowledge and company policies</li>
+<li><span class="arrow">→</span>Implemented natural conversation flow with personality that matched brand voice</li>
+<li><span class="arrow">→</span>Integrated with GHL's contact management to capture leads during conversations</li>
+<li><span class="arrow">→</span>Set up escalation triggers to connect customers with human sellers after specific engagement thresholds</li>
+<li><span class="arrow">→</span>Established feedback loops to continuously improve bot responses based on common queries</li>
+<li><span class="arrow">→</span>Configured reporting to track bot performance and identify areas for improvement</li>
+</ul>
+</div>
+<div class="case-study-section results">
+<h4><span class="num">03.</span> Results</h4>
+<div class="results-grid">
+<div class="result-card"><div class="metric">60%</div><div class="desc">Reduction in initial response time</div></div>
+<div class="result-card"><div class="metric">40%</div><div class="desc">Increase in qualified lead generation</div></div>
+<div class="result-card"><div class="metric">35%</div><div class="desc">More time for sellers to focus on closing</div></div>
+<div class="result-card"><div class="metric">85%</div><div class="desc">Customer satisfaction with initial interactions</div></div>
+<div class="result-card"><div class="metric">25%</div><div class="desc">Increase in conversion rate for bot-handled leads</div></div>
+<div class="result-card"><div class="metric">90%</div><div class="desc">Reduction in repetitive question handling</div></div>
+</div>
+</div>
+<div class="case-study-section">
+<h4><span class="num">04.</span> Lessons Learned</h4>
+<ul>
+<li><span class="arrow" style="color:var(--coffee-light);">✦</span>AI chatbots excel at handling routine questions but need clear escalation paths for complex situations</li>
+<li><span class="arrow" style="color:var(--coffee-light);">✦</span>Personalization and brand consistency in bot responses significantly impact customer perception</li>
+</ul>
+</div>
+</div>
+
+<!-- Solar Case Study -->
 <div class="case-study">
 <div class="case-study-header">
 <div class="badges"><span class="badge-dark">Case Study</span><span class="badge-outline">Solar Industry</span></div>
@@ -368,6 +461,7 @@ nav .nav-links.active{display:flex;flex-direction:column;position:absolute;top:1
 </ul>
 </div>
 </div>
+
 </div>
 </section>
 
@@ -453,6 +547,29 @@ nav .nav-links.active{display:flex;flex-direction:column;position:absolute;top:1
 <div class="copy">© 2026 — Built with care. All rights reserved.</div>
 </div>
 </footer>
+
+<script>
+// Accordion functionality
+document.querySelectorAll('.accordion-trigger').forEach(trigger => {
+    trigger.addEventListener('click', () => {
+        const isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+        const contentId = trigger.getAttribute('aria-controls');
+        const content = document.getElementById(contentId);
+        
+        if (isExpanded) {
+            trigger.setAttribute('aria-expanded', 'false');
+            content.classList.remove('expanded');
+            // Update button text
+            trigger.querySelector('span:first-child').textContent = '▼ View Details';
+        } else {
+            trigger.setAttribute('aria-expanded', 'true');
+            content.classList.add('expanded');
+            // Update button text
+            trigger.querySelector('span:first-child').textContent = '▼ Hide Details';
+        }
+    });
+});
+</script>
 
 </body>
 </html>
