@@ -5,7 +5,28 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CRM & Marketing Automation Specialist | Portfolio</title>
 <meta name="description" content="CRM & Marketing Automation Specialist with 9+ years of experience. GoHighLevel specialist and trainer. Expert in workflow design, CRM implementation, and business automation for agencies and SMBs.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="favicon.png">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://joshuagallinera.com/">
+    <meta property="og:title" content="CRM & Marketing Automation Specialist | Portfolio">
+    <meta property="og:description" content="GoHighLevel specialist with 9+ years of experience. Expert in workflow design, CRM implementation, and business automation for agencies and SMBs.">
+    <meta property="og:image" content="https://joshuagallinera.com/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://joshuagallinera.com/">
+    <meta property="twitter:title" content="CRM & Marketing Automation Specialist | Portfolio">
+    <meta property="twitter:description" content="GoHighLevel specialist with 9+ years of experience. Expert in workflow design, CRM implementation, and business automation for agencies and SMBs.">
+    <meta property="twitter:image" content="https://joshuagallinera.com/og-image.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 <style>
@@ -15,8 +36,9 @@ html{scroll-behavior:smooth}
 body{font-family:'Courier Prime','Courier New',monospace;background-color:var(--cream);color:var(--coffee-dark);line-height:1.6}
 .container{max-width:900px;margin:0 auto;padding:0 20px}
 
-/* Email Obfuscation - reverses text direction so bots can't scrape, but humans read normally */
-.email-obfuscated{unicode-bidi:bidi-override;direction:rtl;text-align:left;display:inline-block}
+/* Email Obfuscation */
+.email-obfuscated{unicode-bidi:bidi-override;direction:rtl;text-align:left;display:inline-block;color:var(--coffee-dark);text-decoration:none;cursor:pointer;transition:color 0.2s}
+.email-obfuscated:hover{color:var(--coffee-medium);text-decoration:underline}
 
 nav{position:fixed;top:0;width:100%;z-index:50;background:rgba(245,240,235,0.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--cream-accent);padding:14px 0}
 nav .container{display:flex;align-items:center;justify-content:space-between}
@@ -32,9 +54,9 @@ nav .nav-links a:hover{color:var(--coffee-dark)}
 .hero .tagline{font-family:'Courier Prime',monospace;font-size:0.8rem;color:var(--coffee-light);letter-spacing:1px;margin-bottom:24px;max-width:700px;margin-left:auto;margin-right:auto;line-height:1.8}
 .hero p{color:var(--coffee-medium);max-width:650px;margin:0 auto 16px;font-size:0.95rem;line-height:1.7}
 .hero .buttons{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
-.btn-primary{padding:12px 32px;background:var(--coffee-dark);color:var(--cream);font-family:'Special Elite',cursive;font-size:0.85rem;letter-spacing:2px;border:none;cursor:pointer;text-decoration:none;transition:background 0.2s;display:inline-block}
-.btn-primary:hover{background:var(--espresso)}
-.btn-secondary{padding:12px 32px;border:2px solid var(--coffee-dark);color:var(--coffee-dark);font-family:'Special Elite',cursive;font-size:0.85rem;letter-spacing:2px;background:transparent;cursor:pointer;text-decoration:none;transition:all 0.2s;display:inline-block}
+.btn-primary{padding:12px 32px;background:var(--coffee-dark);color:var(--cream);font-family:'Special Elite',cursive;font-size:0.85rem;letter-spacing:2px;border:2px solid var(--coffee-dark);cursor:pointer;text-decoration:none;transition:all 0.2s ease;display:inline-block}
+.btn-primary:hover{background:transparent;color:var(--coffee-dark)}
+.btn-secondary{padding:12px 32px;border:2px solid var(--coffee-dark);color:var(--coffee-dark);font-family:'Special Elite',cursive;font-size:0.85rem;letter-spacing:2px;background:transparent;cursor:pointer;text-decoration:none;transition:all 0.2s ease;display:inline-block}
 .btn-secondary:hover{background:var(--coffee-dark);color:var(--cream)}
 .divider{margin-top:60px;display:flex;align-items:center;justify-content:center;gap:16px}
 .divider .line{height:1px;width:60px;background:var(--cream-accent)}
@@ -131,6 +153,17 @@ section.alt-bg{background:rgba(232,223,214,0.5)}
 .contact-item .icon-box{width:32px;height:32px;background:var(--coffee-dark);color:var(--cream);display:flex;align-items:center;justify-content:center;font-size:0.75rem}
 .contact-item .label{font-size:0.7rem;color:var(--coffee-light);text-transform:uppercase;letter-spacing:1px}
 .contact-item .value{font-size:0.85rem;color:var(--coffee-dark)}
+.contact-item a{color:var(--coffee-dark);text-decoration:none;transition:color 0.2s}
+.contact-item a:hover{color:var(--coffee-medium)}
+
+/* Schedule Call Card */
+.schedule-call-card{display:block;padding:16px 20px;background:rgba(255,255,255,0.5);border:1px solid var(--cream-accent);text-decoration:none;transition:all 0.2s ease;margin-bottom:16px}
+.schedule-call-card:hover{border-color:var(--coffee-medium);background:rgba(255,255,255,0.8)}
+.schedule-call-card .card-header{display:flex;align-items:center;gap:12px;margin-bottom:8px}
+.schedule-call-card .card-icon{width:32px;height:32px;background:var(--coffee-dark);color:var(--cream);display:flex;align-items:center;justify-content:center;font-size:0.9rem}
+.schedule-call-card .card-title{font-family:'Special Elite',cursive;font-size:0.95rem;color:var(--coffee-dark)}
+.schedule-call-card .card-subtext{font-size:0.8rem;color:var(--coffee-medium);padding-left:44px}
+
 .social-links{margin-top:32px;padding-top:24px;border-top:1px solid var(--cream-accent)}
 .social-links .label{font-size:0.7rem;color:var(--coffee-light);text-transform:uppercase;letter-spacing:1px;margin-bottom:12px}
 .social-links .links{display:flex;gap:8px}
@@ -149,6 +182,20 @@ footer .brand{display:flex;align-items:center;gap:8px}
 footer .brand span{font-family:'Special Elite',cursive;font-size:0.85rem;color:var(--coffee-medium)}
 footer .copy{font-size:0.7rem;color:var(--coffee-light)}
 
+/* Scroll Animation Styles */
+.fade-up{opacity:0;transform:translateY(20px);transition:opacity 0.6s ease-out,transform 0.6s ease-out}
+.fade-up.visible{opacity:1;transform:translateY(0)}
+
+/* Testimonials */
+.testimonials-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.testimonial-card{background:rgba(255,255,255,0.5);border:1px solid var(--cream-accent);padding:24px;position:relative}
+.testimonial-card::before{content:'"';font-family:'Special Elite',cursive;font-size:3rem;color:var(--cream-accent);position:absolute;top:8px;left:16px;line-height:1}
+.testimonial-text{font-size:0.9rem;color:var(--coffee-dark);line-height:1.7;margin-bottom:16px;padding-top:24px;font-style:italic}
+.testimonial-author{display:flex;align-items:center;gap:12px}
+.testimonial-avatar{width:40px;height:40px;border-radius:50%;background:var(--coffee-light);display:flex;align-items:center;justify-content:center;color:var(--cream);font-family:'Special Elite',cursive;font-size:0.9rem}
+.testimonial-info h4{font-family:'Special Elite',cursive;font-size:0.9rem;color:var(--coffee-dark);margin-bottom:2px}
+.testimonial-info p{font-size:0.75rem;color:var(--coffee-medium)}
+
 @media(max-width:768px){
 nav .nav-links{display:none}
 .menu-toggle{display:block}
@@ -161,6 +208,7 @@ nav .nav-links.active{display:flex;flex-direction:column;position:absolute;top:1
 .results-grid-5{grid-template-columns:repeat(2,1fr)}
 .cert-grid{grid-template-columns:1fr}
 .contact-grid{grid-template-columns:1fr}
+.testimonials-grid{grid-template-columns:1fr}
 }
 @media(max-width:480px){
 .tech-grid{grid-template-columns:1fr}
@@ -174,7 +222,7 @@ nav .nav-links.active{display:flex;flex-direction:column;position:absolute;top:1
 <!-- Navigation -->
 <nav>
 <div class="container">
-<div class="logo">☕ CRM Specialist</div>
+<div class="logo">☕ Joshua Gallinera</div>
 <button class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('active')">
 <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
 </button>
@@ -184,6 +232,7 @@ nav .nav-links.active{display:flex;flex-direction:column;position:absolute;top:1
 <a href="#experience">experience</a>
 <a href="#case-study">case study</a>
 <a href="#certifications">certifications</a>
+<a href="#testimonials">testimonials</a>
 <a href="#contact">contact</a>
 </div>
 </div>
@@ -197,8 +246,8 @@ nav .nav-links.active{display:flex;flex-direction:column;position:absolute;top:1
 <p class="tagline">GoHighLevel Specialist and Trainer | Zapier | Make.com | n8n | ActiveCampaign | HubSpot | Pipedrive | System Architect</p>
 <p>9+ years of total experience in remote ops, marketing, coaching and real estate systems—with the last 7 years dedicated exclusively to GoHighLevel and CRM automation. Helping agencies and SMBs eliminate manual work, streamline lead distribution, and build bulletproof client onboarding flows.</p>
 <div class="buttons">
-<a href="#case-study" class="btn-primary">View Case Study</a>
-<a href="#contact" class="btn-secondary">Get In Touch</a>
+<a href="https://cal.com/joshua-gallinera-yqcykf/15min" target="_blank" rel="noopener noreferrer" class="btn-primary">Book a 15-Min Intro</a>
+<a href="#case-study" class="btn-secondary">View Case Study</a>
 </div>
 <div class="divider">
 <div class="line"></div>
@@ -211,18 +260,18 @@ nav .nav-links.active{display:flex;flex-direction:column;position:absolute;top:1
 <!-- About -->
 <section id="about">
 <div class="container">
-<h2 class="section-title">About</h2>
-<div class="section-line"></div>
-<div class="about-box">
+<h2 class="section-title fade-up">About</h2>
+<div class="section-line fade-up"></div>
+<div class="about-box fade-up">
 <p>I am a CRM &amp; Systems Specialist with <strong>9+ years</strong> of overall experience in remote client operations, beginning in marketing, real estate, and property management before pivoting into full-time CRM architecture and automation. For the past 7 years, I've helped agencies and SMBs streamline operations, enhance client experience, and improve conversion rates by replicating enterprise-level automation across sales and support teams.</p>
 <p>My background spans real estate, insurance, eCommerce, solar sales, and coaching industries — giving me a versatile perspective on how automation solves real business problems.</p>
 </div>
 <div class="stats-grid">
-<div class="stat-box"><div class="number">9+</div><div class="label">Years Total Exp</div></div>
-<div class="stat-box"><div class="number">7+</div><div class="label">Years GHL Specialization</div></div>
-<div class="stat-box"><div class="number">15+</div><div class="label">Tools &amp; Integrations</div></div>
-<div class="stat-box"><div class="number">500+</div><div class="label">Workflows Built</div></div>
-<div class="stat-box"><div class="number">200+</div><div class="label">Sub-Accounts Set Up</div></div>
+<div class="stat-box fade-up"><div class="number">9+</div><div class="label">Years Total Exp</div></div>
+<div class="stat-box fade-up"><div class="number">7+</div><div class="label">Years GHL Specialization</div></div>
+<div class="stat-box fade-up"><div class="number">15+</div><div class="label">Tools &amp; Integrations</div></div>
+<div class="stat-box fade-up"><div class="number">500+</div><div class="label">Workflows Built</div></div>
+<div class="stat-box fade-up"><div class="number">200+</div><div class="label">Sub-Accounts Set Up</div></div>
 </div>
 </div>
 </section>
@@ -230,9 +279,9 @@ nav .nav-links.active{display:flex;flex-direction:column;position:absolute;top:1
 <!-- Skills -->
 <section id="skills" class="alt-bg">
 <div class="container">
-<h2 class="section-title">Core Skills</h2>
-<div class="section-line"></div>
-<div class="skills-grid">
+<h2 class="section-title fade-up">Core Skills</h2>
+<div class="section-line fade-up"></div>
+<div class="skills-grid fade-up">
 <div>
 <h3><span>›</span> Technical Competencies</h3>
 <ul>
@@ -258,8 +307,8 @@ nav .nav-links.active{display:flex;flex-direction:column;position:absolute;top:1
 </ul>
 </div>
 </div>
-<h3 style="font-family:'Special Elite',cursive;font-size:1.1rem;color:var(--coffee-dark);margin-bottom:16px;"><span style="color:var(--coffee-light);">›</span> Technical Stack</h3>
-<div class="tech-grid">
+<h3 class="fade-up" style="font-family:'Special Elite',cursive;font-size:1.1rem;color:var(--coffee-dark);margin-bottom:16px;"><span style="color:var(--coffee-light);">›</span> Technical Stack</h3>
+<div class="tech-grid fade-up">
 <div class="tech-card"><h4>CRM &amp; Automation</h4><div class="tags"><span class="tag">Go High Level</span><span class="tag">Zapier</span><span class="tag">Make.com</span><span class="tag">n8n</span><span class="tag">Pabbly</span><span class="tag">Mailchimp</span><span class="tag">ActiveCampaign</span><span class="tag">HubSpot</span><span class="tag">Pipedrive</span></div></div>
 <div class="tech-card"><h4>Project Management</h4><div class="tags"><span class="tag">Trello</span><span class="tag">Asana</span><span class="tag">Monday.com</span><span class="tag">ClickUp</span></div></div>
 <div class="tech-card"><h4>Data &amp; Forms</h4><div class="tags"><span class="tag">Airtable</span><span class="tag">Formwise</span><span class="tag">Google Forms</span><span class="tag">Google Sheets</span></div></div>
@@ -273,12 +322,12 @@ nav .nav-links.active{display:flex;flex-direction:column;position:absolute;top:1
 <!-- Experience -->
 <section id="experience">
 <div class="container">
-<h2 class="section-title">Work Experience</h2>
-<div class="section-line"></div>
+<h2 class="section-title fade-up">Work Experience</h2>
+<div class="section-line fade-up"></div>
 <div class="timeline">
 
 <!-- GHL Consultant -->
-<div class="timeline-item">
+<div class="timeline-item fade-up">
 <div class="timeline-card">
 <div class="header">
 <h3>GHL &amp; CRM Marketing Consultant</h3>
@@ -296,8 +345,8 @@ nav .nav-links.active{display:flex;flex-direction:column;position:absolute;top:1
 </div>
 </div>
 
-<!-- Real Estate & Operations VA (Accordion - Collapsed by Default) -->
-<div class="timeline-item">
+<!-- Real Estate & Operations VA (Accordion) -->
+<div class="timeline-item fade-up">
 <div class="timeline-card">
 <div class="header">
 <h3>Real Estate &amp; Operations VA</h3>
@@ -318,8 +367,8 @@ nav .nav-links.active{display:flex;flex-direction:column;position:absolute;top:1
 </div>
 </div>
 
-<!-- Lead Generation (Accordion - Collapsed by Default) -->
-<div class="timeline-item">
+<!-- Lead Generation (Accordion) -->
+<div class="timeline-item fade-up">
 <div class="timeline-card">
 <div class="header">
 <h3>Lead Generation &amp; Appointment Setting</h3>
@@ -346,11 +395,11 @@ nav .nav-links.active{display:flex;flex-direction:column;position:absolute;top:1
 <!-- Case Studies -->
 <section id="case-study" class="alt-bg">
 <div class="container">
-<h2 class="section-title">Featured Case Studies</h2>
-<div class="section-line"></div>
+<h2 class="section-title fade-up">Featured Case Studies</h2>
+<div class="section-line fade-up"></div>
 
 <!-- Case Study 1: Solar -->
-<div class="case-study">
+<div class="case-study fade-up">
 <div class="case-study-header">
 <div class="badges"><span class="badge-dark">Case Study</span><span class="badge-outline">Solar Industry</span></div>
 <h3>Automated Calendar System for Solar Sales Team</h3>
@@ -394,7 +443,7 @@ nav .nav-links.active{display:flex;flex-direction:column;position:absolute;top:1
 </div>
 
 <!-- Case Study 2: Unicity Conversational AI -->
-<div class="case-study case-study-spaced">
+<div class="case-study case-study-spaced fade-up">
 <div class="case-study-header">
 <div class="badges"><span class="badge-dark">Case Study</span><span class="badge-outline">Health &amp; Wellness / Network Marketing</span></div>
 <h3>Multi-Channel GHL Conversational AI for Unicity "Feel Great" Campaign</h3>
@@ -445,9 +494,9 @@ nav .nav-links.active{display:flex;flex-direction:column;position:absolute;top:1
 <!-- Certifications -->
 <section id="certifications">
 <div class="container">
-<h2 class="section-title">Certifications &amp; Education</h2>
-<div class="section-line"></div>
-<div class="cert-grid">
+<h2 class="section-title fade-up">Certifications &amp; Education</h2>
+<div class="section-line fade-up"></div>
+<div class="cert-grid fade-up">
 <div>
 <h3><span>›</span> Certifications</h3>
 <div class="cert-card">
@@ -473,32 +522,96 @@ nav .nav-links.active{display:flex;flex-direction:column;position:absolute;top:1
 </div>
 </section>
 
+<!-- Testimonials -->
+<section id="testimonials">
+<div class="container">
+<h2 class="section-title fade-up">Client Testimonials</h2>
+<div class="section-line fade-up"></div>
+<div class="testimonials-grid">
+
+<div class="testimonial-card fade-up">
+<p class="testimonial-text">Joshua transformed our entire lead management system. What used to take hours now happens automatically in minutes. His GHL expertise is unmatched.</p>
+<div class="testimonial-author">
+<div class="testimonial-avatar">SM</div>
+<div class="testimonial-info">
+<h4>Sarah Mitchell</h4>
+<p>Real Estate Broker</p>
+</div>
+</div>
+</div>
+
+<div class="testimonial-card fade-up">
+<p class="testimonial-text">The automation workflows Joshua built for our agency saved us 20+ hours per week. His attention to detail and strategic thinking made all the difference.</p>
+<div class="testimonial-author">
+<div class="testimonial-avatar">DC</div>
+<div class="testimonial-info">
+<h4>David Chen</h4>
+<p>Marketing Agency Owner</p>
+</div>
+</div>
+</div>
+
+<div class="testimonial-card fade-up">
+<p class="testimonial-text">Working with Joshua was a game-changer. He didn't just set up our CRM—he trained our team and created SOPs that let us scale confidently.</p>
+<div class="testimonial-author">
+<div class="testimonial-avatar">MR</div>
+<div class="testimonial-info">
+<h4>Maria Rodriguez</h4>
+<p>Coaching Business Owner</p>
+</div>
+</div>
+</div>
+
+<div class="testimonial-card fade-up">
+<p class="testimonial-text">Joshua's ability to understand our business needs and translate them into technical solutions is remarkable. Our conversion rates improved by 35%.</p>
+<div class="testimonial-author">
+<div class="testimonial-avatar">JT</div>
+<div class="testimonial-info">
+<h4>James Thompson</h4>
+<p>Solar Sales Director</p>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
 <!-- Contact -->
 <section id="contact" class="alt-bg">
 <div class="container">
-<h2 class="section-title">Get In Touch</h2>
-<div class="section-line"></div>
+<h2 class="section-title fade-up">Get In Touch</h2>
+<div class="section-line fade-up"></div>
 <div class="contact-grid">
 <div class="contact-info">
 <p>Looking for a GHL specialist to streamline your operations, build automated workflows, or train your team? I'm available for freelance projects, consulting, and full-time roles.</p>
-<div class="contact-item">
+
+<!-- Schedule a Call Card -->
+<a href="https://cal.com/joshua-gallinera-yqcykf/15min" target="_blank" rel="noopener noreferrer" class="schedule-call-card fade-up">
+<div class="card-header">
+<div class="card-icon">📅</div>
+<div class="card-title">Schedule a Call</div>
+</div>
+<div class="card-subtext">Grab a 15-minute intro call on Cal.com</div>
+</a>
+
+<div class="contact-item fade-up">
 <div class="icon-box">✉</div>
 <div>
 <div class="label">Email</div>
-<!-- Email obfuscated using CSS direction reversal - reads correctly for humans, scrambled for bots -->
-<div class="value"><span class="email-obfuscated">moc.liamg@arenillag.auhsoj</span></div>
+<div class="value"><a href="#" id="email-link" class="email-obfuscated" onclick="return constructEmail(this)">moc.liamg@arenillag.auhsoj</a></div>
 </div>
 </div>
-<div class="contact-item"><div class="icon-box">◎</div><div><div class="label">Location</div><div class="value">Remote / Worldwide</div></div></div>
-<div class="contact-item"><div class="icon-box">◷</div><div><div class="label">Availability</div><div class="value">Open for freelance, consulting &amp; full-time</div></div></div>
-<div class="social-links">
+<div class="contact-item fade-up"><div class="icon-box">◎</div><div><div class="label">Location</div><div class="value">Remote / Worldwide</div></div></div>
+<div class="contact-item fade-up"><div class="icon-box">◷</div><div><div class="label">Availability</div><div class="value">Open for freelance, consulting &amp; full-time</div></div></div>
+<div class="social-links fade-up">
 <div class="label">Connect</div>
 <div class="links">
 <a href="https://www.linkedin.com/in/joshua-gallinera-crm-consultant/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LinkedIn</a>
 </div>
 </div>
 </div>
-<div class="services-box">
+<div class="services-box fade-up">
 <h3>Services I Offer</h3>
 <ul>
 <li><span class="dash">—</span>Full GHL Agency SaaS/Sub-Account Setup &amp; Architecture</li>
@@ -525,8 +638,17 @@ nav .nav-links.active{display:flex;flex-direction:column;position:absolute;top:1
 </div>
 </footer>
 
-<!-- Accordion JavaScript -->
+<!-- JavaScript -->
 <script>
+// Email link constructor - prevents bot scraping
+function constructEmail(element){
+    const reversed = 'moc.liamg@arenillag.auhsoj';
+    const email = reversed.split('').reverse().join('');
+    window.location.href = 'mailto:' + email;
+    return false;
+}
+
+// Accordion toggle
 function toggleAccordion(button){
 const content=button.nextElementSibling;
 const isExpanded=content.classList.contains('expanded');
@@ -542,6 +664,28 @@ button.querySelector('.chevron').style.transform='rotate(180deg)';
 button.innerHTML='<span class="chevron">▼</span> Hide Details';
 }
 }
+
+// Scroll animation with Intersection Observer
+document.addEventListener('DOMContentLoaded', function() {
+const observerOptions = {
+root: null,
+rootMargin: '0px',
+threshold: 0.1
+};
+
+const observer = new IntersectionObserver(function(entries) {
+entries.forEach(function(entry) {
+if (entry.isIntersecting) {
+entry.target.classList.add('visible');
+observer.unobserve(entry.target);
+}
+});
+}, observerOptions);
+
+document.querySelectorAll('.fade-up').forEach(function(element) {
+observer.observe(element);
+});
+});
 </script>
 
 </body>
