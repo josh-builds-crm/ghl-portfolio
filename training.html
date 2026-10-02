@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Group Training &amp; Support Sessions | Joshua Gallinera</title>
+<meta name="description" content="Live group GHL training and troubleshooting sessions led by Joshua Gallinera. Screenshots from real teaching calls and support sessions covering workflows, payments, automations and CRM setup.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="favicon.png">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://joshuagallinera.com/training.html">
+    <meta property="og:title" content="Group Training &amp; Support Sessions | Joshua Gallinera">
+    <meta property="og:description" content="Live group GHL training and troubleshooting sessions. Workflows, payments, automations and CRM setup — taught in real time to real operators.">
+    <meta property="og:image" content="https://joshuagallinera.com/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://joshuagallinera.com/training.html">
+    <meta property="twitter:title" content="Group Training &amp; Support Sessions | Joshua Gallinera">
+    <meta property="twitter:description" content="Live group GHL training and troubleshooting sessions. Workflows, payments, automations and CRM setup — taught in real time to real operators.">
+    <meta property="twitter:image" content="https://joshuagallinera.com/og-image.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--coffee-dark:#3C2415;--coffee-medium:#6F4E37;--coffee-light:#A0785A;--cream:#F5F0EB;--cream-dark:#E8DFD6;--cream-accent:#D4C5B5;--espresso:#2C1810}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Courier Prime','Courier New',monospace;background-color:var(--cream);color:var(--coffee-dark);line-height:1.6}
+.container{max-width:900px;margin:0 auto;padding:0 20px}
+
+nav{position:fixed;top:0;width:100%;z-index:50;background:rgba(245,240,235,0.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--cream-accent);padding:14px 0}
+nav .container{display:flex;align-items:center;justify-content:space-between}
+nav .logo{font-family:'Special Elite',cursive;font-size:1.1rem;font-weight:bold;color:var(--coffee-dark)}
+nav .nav-links{display:flex;gap:20px}
+nav .nav-links a{font-size:0.65rem;text-transform:uppercase;letter-spacing:1.5px;text-decoration:none;color:var(--coffee-medium);font-family:'Special Elite',cursive;transition:color 0.2s;white-space:nowrap}
+nav .nav-links a:hover{color:var(--coffee-dark)}
+.menu-toggle{display:none;background:none;border:none;cursor:pointer;color:var(--coffee-medium)}
+
+.hero{min-height:auto;display:flex;align-items:center;justify-content:center;text-align:center;padding:120px 20px 60px}
+.hero .badge{font-family:'Special Elite',cursive;font-size:0.85rem;color:var(--coffee-light);letter-spacing:4px;text-transform:uppercase;margin-bottom:24px}
+.hero h1{font-family:'Special Elite',cursive;font-size:clamp(1.8rem,4.5vw,3rem);color:var(--espresso);margin-bottom:12px;line-height:1.25}
+.hero .tagline{font-size:0.8rem;color:var(--coffee-light);letter-spacing:1px;margin-bottom:24px;max-width:700px;margin-left:auto;margin-right:auto;line-height:1.8}
+.hero p{color:var(--coffee-medium);max-width:650px;margin:0 auto 16px;font-size:0.95rem;line-height:1.7}
+
+.btn-primary{padding:12px 32px;background:var(--coffee-dark);color:var(--cream);font-family:'Special Elite',cursive;font-size:0.85rem;letter-spacing:2px;border:2px solid var(--coffee-dark);cursor:pointer;text-decoration:none;transition:all 0.2s ease;display:inline-block}
+.btn-primary:hover{background:transparent;color:var(--coffee-dark)}
+.btn-secondary{padding:12px 32px;border:2px solid var(--coffee-dark);color:var(--coffee-dark);font-family:'Special Elite',cursive;font-size:0.85rem;letter-spacing:2px;background:transparent;cursor:pointer;text-decoration:none;transition:all 0.2s ease;display:inline-block}
+.btn-secondary:hover{background:var(--coffee-dark);color:var(--cream)}
+.divider{margin-top:60px;display:flex;align-items:center;justify-content:center;gap:16px}
+.divider .line{height:1px;width:60px;background:var(--cream-accent)}
+.divider span{color:var(--coffee-light);font-size:1.2rem}
+
+section{padding:80px 20px}
+section.alt-bg{background:rgba(232,223,214,0.5)}
+.section-title{font-family:'Special Elite',cursive;font-size:1.8rem;color:var(--espresso);margin-bottom:8px}
+.section-line{height:2px;width:48px;background:var(--coffee-medium);margin-bottom:32px}
+
+.intro-box{background:rgba(255,255,255,0.5);border:1px solid var(--cream-accent);padding:32px;margin-bottom:32px}
+.intro-box p{margin-bottom:16px}
+.intro-box p:last-child{margin-bottom:0}
+
+/* Session cards */
+.session-list{display:flex;flex-direction:column;gap:40px}
+.session{background:rgba(255,255,255,0.5);border:1px solid var(--cream-accent)}
+.session-head{padding:24px 28px 20px;border-bottom:1px solid var(--cream-accent)}
+.session-tag{display:inline-block;font-family:'Special Elite',cursive;font-size:0.6rem;letter-spacing:2px;text-transform:uppercase;color:var(--cream);background:var(--coffee-light);padding:4px 10px;margin-bottom:12px}
+.session-head h3{font-family:'Special Elite',cursive;font-size:1.25rem;color:var(--espresso);margin-bottom:8px}
+.session-meta{display:flex;flex-wrap:wrap;gap:8px 20px;font-size:0.7rem;color:var(--coffee-medium);letter-spacing:0.5px}
+.session-meta span{display:flex;align-items:center;gap:6px}
+.session-body{padding:24px 28px}
+.session-body p{color:var(--coffee-medium);font-size:0.9rem;line-height:1.75;margin-bottom:16px}
+.session-body p:last-child{margin-bottom:0}
+.topic-list{list-style:none;margin-top:4px}
+.topic-list li{display:flex;gap:12px;font-size:0.85rem;margin-bottom:10px;color:var(--coffee-dark);line-height:1.6}
+.topic-list li .dash{color:var(--coffee-light);flex-shrink:0}
+
+/* Screenshot figure */
+.shot{margin-top:24px;border:1px solid var(--cream-accent);background:var(--cream-dark)}
+.shot img{width:100%;height:auto;display:block}
+.shot figcaption{padding:14px 18px;font-size:0.72rem;color:var(--coffee-medium);line-height:1.6;border-top:1px solid var(--cream-accent);background:rgba(255,255,255,0.4)}
+.shot figcaption .cap-label{font-family:'Special Elite',cursive;font-size:0.65rem;letter-spacing:2px;text-transform:uppercase;color:var(--coffee-light);display:block;margin-bottom:6px}
+
+/* Placeholder for pending screenshots */
+.shot-placeholder{border:1px dashed var(--cream-accent);background:rgba(232,223,214,0.35);padding:44px 28px;text-align:center}
+.shot-placeholder .ph-icon{font-size:1.8rem;color:var(--cream-accent);margin-bottom:10px}
+.shot-placeholder .ph-title{font-family:'Special Elite',cursive;font-size:0.9rem;color:var(--coffee-medium);margin-bottom:6px}
+.shot-placeholder .ph-note{font-size:0.7rem;color:var(--coffee-light)}
+
+/* Topic cards */
+.topic-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.topic-card{background:rgba(255,255,255,0.5);border:1px solid var(--cream-accent);padding:22px}
+.topic-card h4{font-family:'Special Elite',cursive;font-size:0.95rem;color:var(--coffee-dark);margin-bottom:8px}
+.topic-card p{font-size:0.8rem;color:var(--coffee-medium);line-height:1.65}
+
+.cta-box{text-align:center;padding:40px 32px;background:rgba(255,255,255,0.5);border:1px solid var(--cream-accent)}
+.cta-box h3{font-family:'Special Elite',cursive;font-size:1.3rem;color:var(--espresso);margin-bottom:12px}
+.cta-box p{color:var(--coffee-medium);max-width:560px;margin:0 auto 24px;font-size:0.9rem}
+
+footer{padding:32px 20px;border-top:1px solid var(--cream-accent)}
+footer .container{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+footer .brand{display:flex;align-items:center;gap:8px}
+footer .brand span{font-family:'Special Elite',cursive;font-size:0.85rem;color:var(--coffee-medium)}
+footer .copy{font-size:0.7rem;color:var(--coffee-light)}
+
+/* Scroll Animation Styles */
+.fade-up{opacity:0;transform:translateY(20px);transition:opacity 0.6s ease-out,transform 0.6s ease-out}
+.fade-up.visible{opacity:1;transform:translateY(0)}
+
+@media(max-width:768px){
+nav .nav-links{display:none}
+.menu-toggle{display:block}
+nav .nav-links.active{display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:var(--cream);border-bottom:1px solid var(--cream-accent);padding:16px 20px;gap:12px}
+.hero h1{font-size:clamp(1.5rem,6vw,2.2rem)}
+.topic-grid{grid-template-columns:1fr}
+.session-head,.session-body{padding-left:20px;padding-right:20px}
+}
+</style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav>
+<div class="container">
+<div class="logo">☕ Joshua Gallinera</div>
+<button class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('active')">
+<svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+</button>
+<div class="nav-links">
+<a href="index.html">home</a>
+<a href="#sessions">sessions</a>
+<a href="#topics">topics</a>
+<a href="#book">book a call</a>
+</div>
+</div>
+</nav>
+
+<!-- Hero -->
+<div class="hero">
+<div>
+<div class="badge">— Live Group Sessions —</div>
+<h1>GHL Training &amp; Troubleshooting Groups</h1>
+<div class="tagline">Real screens. Real problems. Real-time fixes.</div>
+<p>I run live group sessions where I teach people how to use GoHighLevel properly and troubleshoot what's actually broken in their accounts — payments, workflows, automations, pipelines and the integrations that quietly fail between them.</p>
+<p>These aren't recorded courses. People bring their live accounts, something is usually on fire, and we fix it together while everyone watches.</p>
+<div class="divider"><div class="line"></div><span>☕</span><div class="line"></div></div>
+</div>
+</div>
+
+<!-- Intro -->
+<section id="overview">
+<div class="container">
+<h2 class="section-title fade-up">How The Sessions Work</h2>
+<div class="section-line fade-up"></div>
+<div class="intro-box fade-up">
+<p><strong>Two formats, same principle:</strong> nobody should be stuck alone with a platform that refuses to explain itself.</p>
+<p><strong>Teaching sessions</strong> cover the mechanics — how workflows actually route, how to structure pipelines and sub-accounts properly, how to build automations that don't break at 2am. I teach the reasoning, not just the clicks, so people can build their own things afterwards instead of waiting for me.</p>
+<p><strong>Support sessions</strong> are live troubleshooting. Attendees bring whatever is failing — a payment that won't process, a workflow that stopped firing, a form that isn't capturing leads — and we diagnose it together on screen.</p>
+<p>Both formats are interactive by design. The most useful moment in most sessions is somebody else saying "wait, I have that problem too" — because then the fix is proven, not just explained.</p>
+</div>
+</div>
+</section>
+
+<!-- Sessions -->
+<section id="sessions" class="alt-bg">
+<div class="container">
+<h2 class="section-title fade-up">Session Gallery</h2>
+<div class="section-line fade-up"></div>
+
+<div class="session-list">
+
+<!-- Session 1 -->
+<div class="session fade-up">
+<div class="session-head">
+<span class="session-tag">Support Session</span>
+<h3>Payments &amp; Transaction Troubleshooting</h3>
+<div class="session-meta">
+<span>☕ Live group call</span>
+<span>▣ GoHighLevel Payments</span>
+<span>⌁ Stripe &amp; refunds</span>
+</div>
+</div>
+<div class="session-body">
+<p>A group troubleshooting session focused on the Payments module — the part of GHL that most often goes wrong quietly. We walked through a live transaction ledger and worked out why specific payments had succeeded, failed, or been refunded, and what each state means for reconciliation.</p>
+<ul class="topic-list">
+<li>Reading the transactions table: provider, source, and status at a glance</li>
+<li>What a failed payment actually tells you — and what to check first</li>
+<li>Refunds: how they surface, and keeping the ledger trustworthy</li>
+<li>Tracing a customer back through the pipeline, not just the payment row</li>
+</ul>
+
+<figure class="shot">
+<img src="training-01-payments-troubleshooting.jpg" alt="GoHighLevel Payments transactions view shown during a live group support session, with transaction statuses highlighted" width="1600" height="920" loading="lazy">
+<figcaption>
+<span class="cap-label">Session Capture</span>
+Payments module — transaction ledger with status breakdown, reviewed live with the group.
+</figcaption>
+</figure>
+</div>
+</div>
+
+<!-- Session 2 -->
+<div class="session fade-up">
+<div class="session-head">
+<span class="session-tag">Support Session</span>
+<h3>Group Troubleshooting Clinic</h3>
+<div class="session-meta">
+<span>☕ Live group call</span>
+<span>▣ Zoom + screen share</span>
+<span>⌁ Multi-account</span>
+</div>
+</div>
+<div class="session-body">
+<p>An open clinic format — attendees bring their own accounts and whatever is misbehaving. Screen share, diagnose together, fix in real time. The value isn't only the fix: everyone watches the diagnosis, so they learn the method and can repeat it.</p>
+<ul class="topic-list">
+<li>Attendee-driven: whatever is broken that week gets fixed</li>
+<li>Screen-share diagnosis so the reasoning is visible, not just the result</li>
+<li>Cross-account patterns — the same misconfiguration showing up across multiple businesses</li>
+<li>Follow-up SOPs so the same issue doesn't reopen next month</li>
+</ul>
+
+<figure class="shot">
+<img src="training-02.jpg" alt="Zoom group support call in progress with participants and screen share active" width="1600" height="920" loading="lazy">
+<figcaption>
+<span class="cap-label">Session Capture</span>
+Open clinic format — screen-share diagnosis with the group watching the work in progress.
+</figcaption>
+</figure>
+</div>
+</div>
+
+<!-- Session 3 -->
+<div class="session fade-up">
+<div class="session-head">
+<span class="session-tag">Teaching Session</span>
+<h3>Workflow Design &amp; Automation Build</h3>
+<div class="session-meta">
+<span>☕ Live group call</span>
+<span>▣ GHL Workflows</span>
+<span>⌁ Zapier &amp; webhooks</span>
+</div>
+</div>
+<div class="session-body">
+<p>A working session on building automations that hold up in production. We covered workflow architecture, routing logic, and the failure points that only show up once real volume hits a workflow that worked fine in testing.</p>
+<ul class="topic-list">
+<li>Structuring workflows so they're debuggable six months later</li>
+<li>Routing logic and lead distribution — the decision tree, not the trigger</li>
+<li>Zapier and webhook boundaries: what belongs in GHL and what doesn't</li>
+<li>Fallback paths for unassigned leads, failed sends, and missed triggers</li>
+</ul>
+
+<figure class="shot">
+<img src="training-03.jpg" alt="GoHighLevel workflow automation being built during a live group teaching session" width="1600" height="900" loading="lazy">
+<figcaption>
+<span class="cap-label">Session Capture</span>
+Workflow canvas — automation architecture built live for the group.
+</figcaption>
+</figure>
+</div>
+</div>
+
+<!-- Session 4 -->
+<div class="session fade-up">
+<div class="session-head">
+<span class="session-tag">Teaching Session</span>
+<h3>Getting Started &amp; Account Setup</h3>
+<div class="session-meta">
+<span>☕ Live group call</span>
+<span>▣ Sub-account setup</span>
+<span>⌁ Onboarding</span>
+</div>
+</div>
+<div class="session-body">
+<p>The fundamentals session — how to set up a GHL account properly from the start. Most avoidable problems downstream come from decisions made in the first hour of setup, so this session spends its time on getting the foundation right.</p>
+<ul class="topic-list">
+<li>Sub-account architecture and why structure early saves pain later</li>
+<li>Pipelines, opportunities and contact fields set up to match real workflow</li>
+<li>Calendar and form setup that feeds automations correctly</li>
+<li>Client handoff: what to document so someone else can operate it</li>
+</ul>
+
+<figure class="shot">
+<img src="training-04.jpg" alt="GoHighLevel account and sub-account configuration walked through in a group training session" width="1600" height="900" loading="lazy">
+<figcaption>
+<span class="cap-label">Session Capture</span>
+Account setup and sub-account configuration, walked through step by step.
+</figcaption>
+</figure>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- Topics -->
+<section id="topics">
+<div class="container">
+<h2 class="section-title fade-up">What Gets Covered</h2>
+<div class="section-line fade-up"></div>
+
+<div class="topic-grid">
+<div class="topic-card fade-up">
+<h4>Payments &amp; Billing</h4>
+<p>Transaction ledgers, failed payments, refunds, product and order handling, and reconciling what actually cleared.</p>
+</div>
+<div class="topic-card fade-up">
+<h4>Workflows &amp; Automations</h4>
+<p>Trigger logic, branching conditions, routing rules, and building automations that are still maintainable a year later.</p>
+</div>
+<div class="topic-card fade-up">
+<h4>Pipelines &amp; Opportunities</h4>
+<p>Pipeline structure that matches how a business actually sells, opportunity stages, and reporting that reflects reality.</p>
+</div>
+<div class="topic-card fade-up">
+<h4>Forms, Calendars &amp; Booking</h4>
+<p>Capture setup that produces clean data, calendar routing, reminders, and no-show recovery.</p>
+</div>
+<div class="topic-card fade-up">
+<h4>Integrations &amp; Webhooks</h4>
+<p>Zapier and Make boundaries, Facebook Leads, third-party APIs, and debugging where data stops arriving.</p>
+</div>
+<div class="topic-card fade-up">
+<h4>AI Agents &amp; Chat</h4>
+<p>Conversational AI setup, intent routing, prompt limits, and when a human handoff is the correct answer.</p>
+</div>
+<div class="topic-card fade-up">
+<h4>Sub-Account Architecture</h4>
+<p>Multi-client and multi-brand structure, SaaS mode, domains, and keeping client data properly separated.</p>
+</div>
+<div class="topic-card fade-up">
+<h4>Handoff &amp; Documentation</h4>
+<p>SOPs and process documentation so internal teams can run their own systems without calling for help.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- CTA -->
+<section id="book" class="alt-bg">
+<div class="container">
+<div class="cta-box fade-up">
+<h3>Run A Session With Your Team</h3>
+<p>I run private group sessions for agencies, SMBs and internal teams — teaching sessions on a topic you choose, or a troubleshooting clinic where your people bring what's actually broken. Every attendee gets the recording and a written SOP afterward.</p>
+<div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
+<a href="https://cal.com/joshua-gallinera-yqcykf/15min" target="_blank" rel="noopener noreferrer" class="btn-primary">Book a 15-Min Intro</a>
+<a href="index.html#contact" class="btn-secondary">Get in Touch</a>
+</div>
+</div>
+</div>
+</section>
+
+<footer>
+<div class="container">
+<div class="brand"><span>☕</span><span>CRM &amp; Marketing Automation Specialist</span></div>
+<div class="copy">© 2026 — Built with coffee ☕ All nights reserved 😴</div>
+</div>
+</footer>
+
+<!-- JavaScript -->
+<script>
+// Scroll animation with Intersection Observer
+document.addEventListener('DOMContentLoaded', function() {
+const observerOptions = {
+root: null,
+rootMargin: '0px',
+threshold: 0.1
+};
+
+const observer = new IntersectionObserver(function(entries) {
+entries.forEach(function(entry) {
+if (entry.isIntersecting) {
+entry.target.classList.add('visible');
+observer.unobserve(entry.target);
+}
+});
+}, observerOptions);
+
+document.querySelectorAll('.fade-up').forEach(function(element) {
+observer.observe(element);
+});
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,6 @@
+# Original high-resolution screenshots — not published.
+# The site uses the compressed .jpg derivatives (1600px, q82) instead.
+training-*.png
+
+# OS noise
+.DS_Store
