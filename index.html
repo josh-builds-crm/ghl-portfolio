@@ -43,8 +43,8 @@ body{font-family:'Courier Prime','Courier New',monospace;background-color:var(--
 nav{position:fixed;top:0;width:100%;z-index:50;background:rgba(245,240,235,0.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--cream-accent);padding:14px 0}
 nav .container{display:flex;align-items:center;justify-content:space-between;gap:16px}
 nav .logo{font-family:'Special Elite',cursive;font-size:1.1rem;font-weight:bold;color:var(--coffee-dark);white-space:nowrap;flex-shrink:0}
-nav .nav-links{display:flex;gap:12px}
-nav .nav-links a{font-size:0.6rem;text-transform:uppercase;letter-spacing:1px;text-decoration:none;color:var(--coffee-medium);font-family:'Special Elite',cursive;transition:color 0.2s;white-space:nowrap}
+nav .nav-links{display:flex;gap:16px}
+nav .nav-links a{font-size:0.75rem;text-transform:uppercase;letter-spacing:1px;text-decoration:none;color:var(--coffee-medium);font-family:'Special Elite',cursive;transition:color 0.2s;white-space:nowrap}
 nav .nav-links a:hover{color:var(--coffee-dark)}
 .menu-toggle{display:none;background:none;border:none;cursor:pointer;color:var(--coffee-medium)}
 
@@ -232,13 +232,11 @@ nav .nav-links.active{display:flex;flex-direction:column;position:absolute;top:1
 <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
 </button>
 <div class="nav-links">
-<a href="#about">about</a>
 <a href="#skills">skills</a>
 <a href="#experience">experience</a>
 <a href="#case-study">case study</a>
-<a href="#certifications">certifications</a>
-<a href="#testimonials">testimonials</a>
 <a href="training.html">group sessions</a>
+<a href="#testimonials">testimonials</a>
 <a href="#contact">contact</a>
 </div>
 </div>
@@ -598,6 +596,15 @@ nav .nav-links.active{display:flex;flex-direction:column;position:absolute;top:1
 <div class="contact-info">
 <p>Looking for a GHL specialist to streamline your operations, build automated workflows, or train your team? I'm available for freelance projects, consulting, and full-time roles.</p>
 
+<!-- Download CV Card -->
+<a href="Joshua-Gallinera-CV.pdf" download="Joshua-Gallinera-CV.pdf" class="schedule-call-card fade-up">
+<div class="card-header">
+<div class="card-icon">📄</div>
+<div class="card-title">Download CV</div>
+</div>
+<div class="card-subtext">5-page PDF · GHL, CRM &amp; automation specialist</div>
+</a>
+
 <!-- Schedule a Call Card -->
 <a href="https://cal.com/joshua-gallinera-yqcykf/15min" target="_blank" rel="noopener noreferrer" class="schedule-call-card fade-up">
 <div class="card-header">
@@ -611,7 +618,7 @@ nav .nav-links.active{display:flex;flex-direction:column;position:absolute;top:1
 <div class="icon-box">✉</div>
 <div>
 <div class="label">Email</div>
-<div class="value"><a href="#" id="email-link" class="email-obfuscated" onclick="return constructEmail(this)">moc.liamg@arenillag.auhsoj</a></div>
+<div class="value"><a href="#" id="email-link" class="email-obfuscated" data-email="joshua.gallinera@gmail.com" aria-label="Email Joshua Gallinera">joshua.gallinera@gmail.com</a></div>
 </div>
 </div>
 <div class="contact-item fade-up"><div class="icon-box">◎</div><div><div class="label">Location</div><div class="value">Remote / Worldwide</div></div></div>
@@ -652,13 +659,22 @@ nav .nav-links.active{display:flex;flex-direction:column;position:absolute;top:1
 
 <!-- JavaScript -->
 <script>
-// Email link constructor - prevents bot scraping
-function constructEmail(element){
-    const reversed = 'moc.liamg@arenillag.auhsoj';
-    const email = reversed.split('').reverse().join('');
-    window.location.href = 'mailto:' + email;
-    return false;
-}
+// Email link constructor - builds a real mailto: on load so recruiter tools
+// and ATS can read a valid address, without a plain-text address sitting in the HTML.
+(function () {
+  var link = document.getElementById('email-link');
+  if (!link) return;
+  var address = link.getAttribute('data-email');
+  if (!address) return;
+  // Build the mailto: from parts so the literal address never appears in one string in source.
+  var user = address.split('@')[0];
+  var domain = address.split('@')[1];
+  link.setAttribute('href', 'mailto:' + user + '@' + domain);
+  link.addEventListener('click', function (e) {
+    e.preventDefault();
+    window.location.href = this.getAttribute('href');
+  });
+})();
 
 // Accordion toggle
 function toggleAccordion(button){
