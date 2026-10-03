@@ -38,7 +38,7 @@ body{font-family:'Courier Prime','Courier New',monospace;background-color:var(--
 
 nav{position:fixed;top:0;width:100%;z-index:50;background:rgba(245,240,235,0.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--cream-accent);padding:14px 0}
 nav .container{display:flex;align-items:center;justify-content:space-between}
-nav .logo{font-family:'Special Elite',cursive;font-size:1.1rem;font-weight:bold;color:var(--coffee-dark)}
+nav .logo{font-family:'Special Elite',cursive;font-size:1.1rem;font-weight:bold;color:var(--coffee-dark);white-space:nowrap}
 nav .nav-links{display:flex;gap:20px}
 nav .nav-links a{font-size:0.65rem;text-transform:uppercase;letter-spacing:1.5px;text-decoration:none;color:var(--coffee-medium);font-family:'Special Elite',cursive;transition:color 0.2s;white-space:nowrap}
 nav .nav-links a:hover{color:var(--coffee-dark)}
@@ -161,7 +161,7 @@ nav .nav-links.active{display:flex;flex-direction:column;position:absolute;top:1
 <div class="section-line fade-up"></div>
 <div class="intro-box fade-up">
 <p><strong>Two formats, same principle:</strong> nobody should be stuck alone with a platform that refuses to explain itself.</p>
-<p><strong>Teaching sessions</strong> cover the mechanics — how workflows actually route, how to structure pipelines and sub-accounts properly, how to build automations that don't break at 2am. I teach the reasoning, not just the clicks, so people can build their own things afterwards instead of waiting for me.</p>
+<p><strong>Teaching sessions</strong> cover the mechanics — how workflows actually route, how to read the numbers your platform reports, how to build automations that don't break at 2am. I teach the reasoning, not just the clicks, so people can build their own things afterwards instead of waiting for me.</p>
 <p><strong>Support sessions</strong> are live troubleshooting. Attendees bring whatever is failing — a payment that won't process, a workflow that stopped firing, a form that isn't capturing leads — and we diagnose it together on screen.</p>
 <p>Both formats are interactive by design. The most useful moment in most sessions is somebody else saying "wait, I have that problem too" — because then the fix is proven, not just explained.</p>
 </div>
@@ -209,28 +209,29 @@ Payments module — transaction ledger with status breakdown, reviewed live with
 <!-- Session 2 -->
 <div class="session fade-up">
 <div class="session-head">
-<span class="session-tag">Support Session</span>
-<h3>Group Troubleshooting Clinic</h3>
+<span class="session-tag">Teaching Session</span>
+<h3>Reading Facebook Ads Stats — And Knowing What To Do About Them</h3>
 <div class="session-meta">
 <span>☕ Live group call</span>
-<span>▣ Zoom + screen share</span>
-<span>⌁ Multi-account</span>
+<span>▣ Facebook Ads Manager</span>
+<span>⌁ Performance analysis</span>
 </div>
 </div>
 <div class="session-body">
-<p>An open clinic format — attendees bring their own accounts and whatever is misbehaving. Screen share, diagnose together, fix in real time. The value isn't only the fix: everyone watches the diagnosis, so they learn the method and can repeat it.</p>
+<p>Most small business owners can read an ads dashboard, but not interpret it — so they end up making decisions on numbers they don't understand. This session walks the group through how to actually read ad performance data and, more importantly, what to change based on what the data is telling them.</p>
 <ul class="topic-list">
-<li>Attendee-driven: whatever is broken that week gets fixed</li>
-<li>Screen-share diagnosis so the reasoning is visible, not just the result</li>
-<li>Cross-account patterns — the same misconfiguration showing up across multiple businesses</li>
-<li>Follow-up SOPs so the same issue doesn't reopen next month</li>
+<li>Reading the core metrics: what each one actually indicates about performance</li>
+<li>Separating a genuine problem from normal variance in the numbers</li>
+<li>Diagnosing which stage is failing — clicks, conversion rate, or cost per result</li>
+<li>Deciding what to change next: the ad, the audience, the creative, or the landing page</li>
+<li>Reading results honestly, including when to stop spending and re-test</li>
 </ul>
 
 <figure class="shot">
-<img src="training-02.jpg" alt="Zoom group support call in progress with participants and screen share active" width="1600" height="920" loading="lazy">
+<img src="training-02.jpg" alt="Facebook Ads Manager performance statistics reviewed during a live group teaching session" width="1600" height="920" loading="lazy">
 <figcaption>
 <span class="cap-label">Session Capture</span>
-Open clinic format — screen-share diagnosis with the group watching the work in progress.
+Ads Manager — performance stats walked through live, and turned into decisions the group could act on.
 </figcaption>
 </figure>
 </div>
@@ -240,27 +241,28 @@ Open clinic format — screen-share diagnosis with the group watching the work i
 <div class="session fade-up">
 <div class="session-head">
 <span class="session-tag">Teaching Session</span>
-<h3>Workflow Design &amp; Automation Build</h3>
+<h3>Automated Workflows For Health Coaches</h3>
 <div class="session-meta">
 <span>☕ Live group call</span>
 <span>▣ GHL Workflows</span>
-<span>⌁ Zapier &amp; webhooks</span>
+<span>⌁ Stripe · Domains · WhatsApp</span>
 </div>
 </div>
 <div class="session-body">
-<p>A working session on building automations that hold up in production. We covered workflow architecture, routing logic, and the failure points that only show up once real volume hits a workflow that worked fine in testing.</p>
+<p>A dedicated session for health coaches building their first automation stack. We walk the group through the full pipeline — from the webinar where someone first opts in, through every automated step that follows, to a payment that goes through without anyone manually touching it.</p>
 <ul class="topic-list">
-<li>Structuring workflows so they're debuggable six months later</li>
-<li>Routing logic and lead distribution — the decision tree, not the trigger</li>
-<li>Zapier and webhook boundaries: what belongs in GHL and what doesn't</li>
-<li>Fallback paths for unassigned leads, failed sends, and missed triggers</li>
+<li>Webinar registration and the automated follow-up sequence that follows it</li>
+<li>Webinar reminder sequences — what to send, and when timing actually matters</li>
+<li>Connecting Stripe so payments process automatically inside the workflow</li>
+<li>Domain connection and why it matters for deliverability and trust</li>
+<li>Setting up WhatsApp, including getting message templates approved</li>
 </ul>
 
 <figure class="shot">
-<img src="training-03.jpg" alt="GoHighLevel workflow automation being built during a live group teaching session" width="1600" height="900" loading="lazy">
+<img src="training-03.jpg" alt="GoHighLevel automated workflow being configured for health coaches during a live group teaching session" width="1600" height="900" loading="lazy">
 <figcaption>
 <span class="cap-label">Session Capture</span>
-Workflow canvas — automation architecture built live for the group.
+Workflow build — webinar to payment, with Stripe, domains and WhatsApp configured live for the group.
 </figcaption>
 </figure>
 </div>
@@ -269,28 +271,28 @@ Workflow canvas — automation architecture built live for the group.
 <!-- Session 4 -->
 <div class="session fade-up">
 <div class="session-head">
-<span class="session-tag">Teaching Session</span>
-<h3>Getting Started &amp; Account Setup</h3>
+<span class="session-tag">Support Session</span>
+<h3>Group Support &amp; Troubleshooting Calls</h3>
 <div class="session-meta">
 <span>☕ Live group call</span>
-<span>▣ Sub-account setup</span>
-<span>⌁ Onboarding</span>
+<span>▣ Webex · Zoom</span>
+<span>⌁ Open format</span>
 </div>
 </div>
 <div class="session-body">
-<p>The fundamentals session — how to set up a GHL account properly from the start. Most avoidable problems downstream come from decisions made in the first hour of setup, so this session spends its time on getting the foundation right.</p>
+<p>An open-format session where attendees bring whatever is misbehaving in their accounts and we work through it together. The fix matters, but so does the diagnosis being visible — people watch the reasoning, learn the method, and can repeat it themselves the next time something breaks.</p>
 <ul class="topic-list">
-<li>Sub-account architecture and why structure early saves pain later</li>
-<li>Pipelines, opportunities and contact fields set up to match real workflow</li>
-<li>Calendar and form setup that feeds automations correctly</li>
-<li>Client handoff: what to document so someone else can operate it</li>
+<li>Attendee-driven: whatever is broken that week gets fixed</li>
+<li>Screen-share diagnosis so the reasoning is visible, not just the result</li>
+<li>Patterns that repeat across different businesses and different accounts</li>
+<li>Written follow-up SOPs, so the same issue doesn't reopen next month</li>
 </ul>
 
 <figure class="shot">
-<img src="training-04.jpg" alt="GoHighLevel account and sub-account configuration walked through in a group training session" width="1600" height="900" loading="lazy">
+<img src="training-04.jpg" alt="Group support call in progress with Joshua Gallinera and two attendees" width="1600" height="900" loading="lazy">
 <figcaption>
 <span class="cap-label">Session Capture</span>
-Account setup and sub-account configuration, walked through step by step.
+Open support format — attendees bring what's broken in their own accounts and we fix it together.
 </figcaption>
 </figure>
 </div>
@@ -320,8 +322,8 @@ Account setup and sub-account configuration, walked through step by step.
 <p>Pipeline structure that matches how a business actually sells, opportunity stages, and reporting that reflects reality.</p>
 </div>
 <div class="topic-card fade-up">
-<h4>Forms, Calendars &amp; Booking</h4>
-<p>Capture setup that produces clean data, calendar routing, reminders, and no-show recovery.</p>
+<h4>Facebook Ads &amp; Performance Data</h4>
+<p>Reading Ads Manager stats properly, spotting a real problem versus normal variance, and deciding what to change next.</p>
 </div>
 <div class="topic-card fade-up">
 <h4>Integrations &amp; Webhooks</h4>
@@ -332,8 +334,8 @@ Account setup and sub-account configuration, walked through step by step.
 <p>Conversational AI setup, intent routing, prompt limits, and when a human handoff is the correct answer.</p>
 </div>
 <div class="topic-card fade-up">
-<h4>Sub-Account Architecture</h4>
-<p>Multi-client and multi-brand structure, SaaS mode, domains, and keeping client data properly separated.</p>
+<h4>Webinars, Stripe &amp; WhatsApp</h4>
+<p>Webinar registration and reminder sequences, connecting Stripe for automatic payments, domains, and WhatsApp templates.</p>
 </div>
 <div class="topic-card fade-up">
 <h4>Handoff &amp; Documentation</h4>
