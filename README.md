@@ -144,21 +144,21 @@ Twilio · SendGrid · Instantly · Klaviyo · Typeform
 
 ## 💬 Client Testimonials
 
+> *"Joshua has been an incredible support to me and my business. He has helped me build things from scratch, set up my CRM, create automations, work through Facebook ads and so much more. He takes care of all the technical details and the nitty-gritty behind the scenes that I simply wouldn't have known where to begin with on my own. Whenever I go to him with a problem or issue, he understands what I'm trying to achieve and somehow manages to whizz through it, no matter how complicated it may have felt to me. He hasn't only set things up for me; he has taught me so much along the way and takes the time to explain what he is doing, how everything works and why it has been set up in a certain way. I know I can always rely on Joshua to sort things out and there is such peace of mind in knowing I have him there when I need help. He is knowledgeable, patient, dependable and genuinely brilliant at what he does. I would wholeheartedly recommend him to any business or individual looking for someone they can completely trust with their systems and technical support."*
+
+> **— Pamela R., Yoga Coach**
+
 > *"We took a chance moving forward despite a few mixed reviews, and it turned out to be one of the best decisions we've made. During a recent multi-month project with aggressive timelines and clients constantly breathing down our necks he was a steady, high-level operator who consistently brought clarity to chaos. He thinks end-to-end, anticipates failure points, and isn't afraid to push back when he knows there's a better, more scalable way to implement systems under pressure... He is one of the best contractors we've worked with in the past year."*
->
+
 > **— Jared K., eXp Agent**
 
----
-
 > *"Joshua Shines as a Proactive, Solutions-Driven Powerhouse! Joshua's exceptional dedication and technical prowess have propelled our projects forward. From day one, Joshua has taken bold initiative, consistently proposing creative solutions and implementing temporary fixes to keep workflows seamless. His 'no-nonsense, get-it-done' mindset has been invaluable — especially in tackling complex GHL tech integrations, Make automation, and GPT-driven tasks... Whether it's troubleshooting bottlenecks or driving automation innovation, Joshua delivers results without excuses."*
->
+
 > **— Kemmet D., Agent CRM**
 
----
-
 > *"Joshua was amazing to work with for our chiropractic marketing agency. His expertise with GoHighLevel made a huge difference. He integrated the platform seamlessly and improved our client management and marketing automation. He was always professional, responsive, and went the extra mile to tailor everything to our needs. Our client engagement has noticeably improved thanks to his help. If you need someone knowledgeable and dedicated, Josh is your guy."*
->
-> **— Christos M., UK Chiropractor Agency**
+
+> **— Christos M., CONEK Chiropractor Agency**
 
 ---
 
@@ -201,7 +201,7 @@ Twilio · SendGrid · Instantly · Klaviyo · Typeform
 
 ## 🌐 Website Features
 
-This portfolio is a single-page static site hosted on GitHub Pages with:
+This portfolio is a static site (index.html + training.html) hosted on GitHub Pages with:
 
 - ☕ Coffee-toned theme with typewriter fonts (Special Elite + Courier Prime)
 - 📱 Fully responsive design (mobile, tablet, desktop)
@@ -218,12 +218,20 @@ This portfolio is a single-page static site hosted on GitHub Pages with:
 ## 📂 Repository Structure
 
 ```
+
 ghl-portfolio/
-├── index.html          # Main portfolio (single-file, self-contained)
+├── .gitignore
+├── CNAME
+├── Joshua-Gallinera-CV.pdf
+├── README.md           # This file
 ├── favicon.png         # Browser tab icon (512x512px)
+├── index.html          # Main portfolio (single-file, self-contained)
 ├── og-image.png        # Social media share image (1200x630px)
-├── CNAME               # Custom domain config (joshuagallinera.com)
-└── README.md           # This file
+├── training.html       # Group sessions page
+├── training-01-payments-troubleshooting.jpg
+├── training-02.jpg
+├── training-03.jpg
+└── training-04.jpg
 ```
 
 ---
